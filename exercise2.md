@@ -91,9 +91,9 @@ This part accounting for 10% of the score.
 If everything is ok, you can see a  rust_helloworld.ko in the samples/rust directory.
 Then copy it to the src_e1000/rootfs and then run build_image.sh
 
-### A Small TTY Driver from <<Linux Device Driver 3rd Edition>>
-
-
 After you enter the Linux shell, use 'ls' command,  you can find the rust_helloworld.ko.
 Then use insmod to start this module.
 Finally, you can see the "Hello World from Rust module"
+
+### A Small TTY Driver from <<Linux Device Driver 3rd Edition>>
+

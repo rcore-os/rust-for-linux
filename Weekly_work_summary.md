@@ -11,3 +11,7 @@
   - Built ramdisk fs to boot in u-boot;
 
 ### CL
+* 准备训练第三阶段的计划，代码与练习；
+
+* starfive一代开发板arceos网卡收发包完成
+

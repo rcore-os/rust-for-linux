@@ -25,7 +25,7 @@ feature way？
 
 
 ## 阶段性练习及每周的引导
-时间：1周
+交流时间：周一和周四
 
 （Linux device driver书中的例子；驱动难度合适；）
 
@@ -38,7 +38,7 @@ feature way？
 4. 基于Qemu模拟器，学习一个已完成框架的e1000网卡驱动，并填充里面的收包或发包驱动函数；
 
 ## 参与到物理开发板的驱动开发Project前的准备
-时间：1周
+交流时间：周一和周四
 
 (可选virtio驱动, 或者已有rust-for-linux实现的驱动)
 
@@ -52,6 +52,26 @@ feature way？
 （硬件板子可以选：华山派）
 
 * 在物理开发板上，编写一个Rust for Linux串口Uart驱动；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * 在物理开发板上，编写一个Rust for Linux网卡驱动；
 * 在物理开发板上，编写一个Rust for Linux 内置flash/外置SD卡的存储驱动；
 

@@ -31,7 +31,7 @@ feature way？
 
 1. 获取Rust for Linux源码，配置环境并编译通过；
 
-2. 编写一个简单的“Hello World”的Rust内核模块，掌握Rust内核驱动模块的各个基础组成部分；
+2. 编写一个简单的“Hello World”的Rust内核模块，掌握Rust内核驱动模块的各个基础组成部分；或已有rust-for-linux实现的驱动的学习；
 
 3. 自定义一个linux内核函数, 并在“Hello World”Rust模块中调用它；
 
@@ -39,8 +39,6 @@ feature way？
 
 ## 参与到物理开发板的驱动开发Project前的准备
 交流时间：周一和周四
-
-(可选Qemu virtio驱动, 或者已有rust-for-linux实现的驱动)
 
 * 若在物理机器上，准备Linux基本运行的工作，如设备树，内存基地址，设备基地址等
 
@@ -52,7 +50,7 @@ feature way？
 ## 参与到物理开发板的驱动开发Project
 时间：2周
 （硬件板子可以选：华山派）
-
+* 模拟器Qemu virtio驱动在Linux 6.5上驱动起来；
 * 在物理开发板上，编写一个Rust for Linux串口Uart驱动；
 
 

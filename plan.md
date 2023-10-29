@@ -17,7 +17,7 @@ Rust内核驱动模块的基本框架的编写；
 通过练习的成绩，打分排名等方式筛选成绩优秀的学员；
 
 (
-邀请导师讲课；
+邀请导师讲课；在社区上多交流
 具体的上课时间待进一步商议；
 
 feature way？
@@ -27,7 +27,9 @@ feature way？
 ## 阶段性练习及每周的引导
 交流时间：周一和周四
 
-（Linux device driver书中的例子；驱动难度合适；）
+（Linux device driver书中的例子；驱动难度合适；
+学员分析已有的rust for linux的project工作并讲解；
+）
 
 1. 获取Rust for Linux源码，配置环境并编译通过；
 
@@ -50,7 +52,7 @@ feature way？
 ## 参与到物理开发板的驱动开发Project
 时间：2周
 （硬件板子可以选：华山派）
-* 模拟器Qemu virtio驱动在Linux 6.5上驱动起来；
+* 模拟器Qemu virtio驱动在Linux 6.6 上驱动起来；
 * 在物理开发板上，编写一个Rust for Linux串口Uart驱动；
 
 

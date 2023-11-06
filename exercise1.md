@@ -1,16 +1,16 @@
 # Exercise 1
-## 练习1: Rust for Linux 仓库源码获取，编译环境部署，及Rust内核编译。
+## 练习1: Rust for Linux 仓库源码获取，编译环境部署，及Rust内核编译。之后尝试在模拟器Qemu上运行起来。
 
 1. Get source code 
 we have collected all the source code for you in the homework repository(as mentioned before). However, you can also get source code from Rust for Linux official repository:
 ```
-git clone https://github.com/Rust-for-Linux/linux
+git clone https://github.com/Rust-for-Linux/linux -b rust-dev
 ```
-and the rust version source code by XLY from the following repository:
+OR the rust version source code by fujita from the following repository:
 ```
 git clone https://github.com/fujita/linux.git -b rust-e1000
 ```
-we have merged the two repositories and fixed the bugs in building. But if you are interested in how it works, you can try to merge it and fix the conflicts. Enjoy it!
+Enjoy it!
 
 2. Preparation
 First you need to install some packages(if the warning or error tell you need more packages, just intall them all):
@@ -33,23 +33,25 @@ apt-get install clang-format clang-tidy clang-tools clang clangd libc++-dev libc
 Then try to make the kernel support the Rust language:
 ```
 cd linux
+sudo apt install clang llvm
+
+make LLVM=1 rustavailable
 rustup override set $(scripts/min-tool-version.sh rustc)
 rustup component add rust-src
-sudo apt install clang llvm
-cargo install --locked --version $(scripts/min-tool-version.sh bindgen) bindgen
-rustup component add rustfmt
-rustup component add clippy
-make LLVM=1 rustavailable
+cargo install --locked --version $(scripts/min-tool-version.sh bindgen) bindgen-cli
 ```
  
 3. Build the kernel tree and the image
 As we introduced in our lesson, you have to
 ```
-make LLVM=1 menuconfig
+make ARCH=arm64 LLVM=1 O=build defconfig
+
+make ARCH=arm64 LLVM=1 O=build menuconfig
 #set the following config to yes
 General setup
         ---> [*] Rust support
-make LLVM=1 -j$(nproc)
+
+make ARCH=arm64 LLVM=1 -j8
 ```
 After that, under your linux folder you can find a file named vmlinux, which means your building is success. Congratulations!
 

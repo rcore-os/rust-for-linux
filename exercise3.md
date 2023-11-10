@@ -1,5 +1,6 @@
 # 基于Qemu模拟器上的e1000网卡驱动框架，填充驱动初始化函数
-获取e1000-driver代码 https://github.com/yuoo655/e1000-driver 
+获取e1000-driver代码 https://github.com/yuoo655/e1000-driver 以及相应的linux仓库 https://github.com/fujita/linux/tree/rust-e1000
+
 完成Exercise3 Checkpoint 1-5
 
 # 自定义一个linux内核函数, 并在rust模块中调用它.

@@ -22,7 +22,7 @@ NAPI的工作流程大致如下：
 
 3.软中断调用net_rx_action函数，从轮询列表中取出NAPI结构体，调用其poll函数，处理数据包。
 
-4. poll函数每处理一个数据包，就调用napi_consume(64)来更新napi_gro_count字段，如果napi_gro_count为0，或者没有更多的GRO数据包可处理，就退出轮询模式，重新开启设备的中断，等待下一次硬件中断。poll函数返回驱动程序本次处理的数据包个数。用来判断是否达到了NAPI_POLL_WEIGHT上限。
+4.poll函数每处理一个数据包，就调用napi_consume(64)来更新napi_gro_count字段，如果napi_gro_count为0，或者没有更多的GRO数据包可处理，就退出轮询模式，重新开启设备的中断，等待下一次硬件中断。poll函数返回驱动程序本次处理的数据包个数。用来判断是否达到了NAPI_POLL_WEIGHT上限。
 
 (napi_gro_count是NAPI结构体中的一个字段，它表示当前NAPI设备正在处理的GRO数据包的个数。GRO是一种通用的接收聚合技术，它的作用是将多个相同流的数据包合并成一个大的数据包，从而减少内核协议栈的处理开销。napi_gro_count的值会在每次调用napi_consume函数时减去处理的数据包个数，如果结果为0，就表示NAPI已经处理完所有的GRO数据包，可以退出轮询模式。) 
 
@@ -35,4 +35,5 @@ NAPI的工作流程大致如下：
 - 类型/长度（Type/Length）：2个字节，用于指定帧的类型或长度。
 - 数据（Data）：46~1500个字节，用于存储帧的有效载荷，包括其他协议的报头和数据。
 - 帧检验序列（Frame Check Sequence，FCS）：4个字节，用于存储CRC校验码，用于检测帧在传输过程中是否出现错误。
+
 fujita rust-e1000中length -= 4的操作是为了去掉FCS。

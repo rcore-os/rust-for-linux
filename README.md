@@ -5,6 +5,7 @@
 
 ## 相关资料参考
 Rust for Linux社区仓库: https://github.com/Rust-for-Linux
+<br>编译过程参考：https://github.com/rcore-os/blog/blob/master/source/_posts/%E7%BC%96%E8%AF%91Linux%E5%86%85%E6%A0%B8%E5%BC%80%E5%90%AFRust%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81.md
 
 Rust e1000网卡驱动: https://github.com/fujita/linux.git
 

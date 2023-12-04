@@ -3,6 +3,8 @@
 ## 课题目标
 学生选修该课题，可以学习到如何一步一步地开发一个Rust for Linux内核驱动；逐步积累并形成学习开发文档；进而有机会为rcore-os Rust操作系统社区以及Linux社区的发展，通过编写Rust驱动等方式贡献一份自己的力量。
 
+具体[课题计划](plan.md)
+
 ## 相关资料参考
 Rust for Linux社区仓库: https://github.com/Rust-for-Linux
 <br>编译过程参考：https://github.com/rcore-os/blog/blob/master/source/_posts/%E7%BC%96%E8%AF%91Linux%E5%86%85%E6%A0%B8%E5%BC%80%E5%90%AFRust%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81.md

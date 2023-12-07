@@ -1,5 +1,7 @@
 # 基于Qemu模拟器上的e1000网卡驱动框架，填充驱动初始化函数
-获取e1000-driver代码 https://github.com/yuoo655/e1000-driver 以及相应的linux仓库 https://github.com/fujita/linux/tree/rust-e1000
+获取e1000-driver代码 https://github.com/yuoo655/e1000-driver
+
+相应的linux仓库 https://github.com/fujita/linux/tree/rust-e1000
 
 完成Exercise3 Checkpoint 1-5
 
@@ -14,4 +16,5 @@
 # step3
 在Rust网卡驱动模块中模块中引入kernel::bindings::*; 通过bindings::函数名方式调用.
 
-
+作业解答之e1000驱动完整实现：
+Rust e1000网卡驱动模块: https://github.com/elliott10/e1000-driver.git

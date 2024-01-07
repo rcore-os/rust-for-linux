@@ -9,7 +9,7 @@
 Rust for Linux社区仓库: https://github.com/Rust-for-Linux
 
 Linux之Rust api接口适配e1000网卡驱动: https://github.com/fujita/linux.git
-<br>Rust e1000网卡驱动模块（无法用于e1000e）： https://github.com/elliott10/e1000-driver.git
+<br>Rust e1000网卡驱动模块，支持了`e1000`与`e1000e`网卡： https://github.com/elliott10/e1000-driver.git
 
 Rust实现的VirtIO驱动: https://github.com/rcore-os/virtio-drivers.git
 
